@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Modern Imlek - Putricia Serenity</title>
+<style>
+/* Reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body {background: #fff0e6; overflow-x:hidden; position:relative;}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff4d4d, #ffb84d);
+    padding: 60px 20px 140px 20px;
+    text-align: center;
+    color: gold;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Foto Profil */
+.profile-pic {
+    width: 160px; height:160px;
+    border-radius:50%;
+    border:5px solid gold;
+    object-fit: cover;
+    margin:0 auto 20px auto;
+    display:block;
+    box-shadow: 0 0 25px rgba(255,215,0,0.8);
+    animation: pop 0.8s ease forwards;
+}
+
+/* Judul & Subjudul */
+h1,h2 {opacity:0;}
+h1 {font-size:2.8em; margin-bottom:10px; animation: fadeSlideDown 1s ease forwards 0.5s;}
+h2 {font-size:1.6em; font-weight:400; animation: fadeSlideUp 1s ease forwards 1s;}
+
+/* Main */
+main {
+    max-width: 900px;
+    margin: -120px auto 50px auto;
+    padding: 30px;
+    background: #fff8f0;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    position: relative; z-index:2;
+}
+
+/* Section */
+section {
+    margin-bottom: 35px;
+    opacity:0;
+    transform: scale(0.95);
+    animation: fadeScale 0.8s forwards;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff3e6;
+}
+section:hover {
+    transform: scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+section h3 {font-size:1.6em; margin-bottom:10px; color:#c0392b; border-bottom:2px solid #ff9f00; display:inline-block;}
+p, li {font-size:1em; margin-bottom:8px; line-height:1.6;}
+ul {padding-left:20px;}
+
+/* Footer */
+footer {text-align:center; padding:20px 0; background:#ff4d4d; color:gold; font-weight:bold; border-radius:15px;}
+
+/* Lampion */
+.lantern {position:absolute; width:50px; height:70px; background: radial-gradient(circle at top, gold, #ff0000); border-radius:20% 20% 50% 50%; top:-100px; animation: dropSwing 6s infinite alternate ease-in-out; z-index:1;}
+.lantern.left {left:30px; animation-delay:0s;}
+.lantern.right {right:30px; animation-delay:2s;}
+
+/* Bunga jatuh */
+.flower {position:absolute; width:20px; height:20px; background: radial-gradient(circle, #ff9f00, #ff4500); border-radius:50%; top:-20px; animation:fall 6s linear infinite; z-index:0;}
+
+/* Confetti */
+.confetti {position:absolute; width:10px; height:10px; background: gold; opacity:0.8; top:-10px; animation:confettiFall linear infinite; border-radius:50%; z-index:0;}
+
+/* Keyframes */
+@keyframes pop {0%{transform:scale(0);opacity:0;}100%{transform:scale(1);opacity:1;}}
+@keyframes fadeSlideDown {0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeSlideUp {0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeScale {0%{opacity:0; transform:scale(0.95) translateY(30px);}100%{opacity:1; transform:scale(1) translateY(0);}}
+@keyframes dropSwing {0%{top:-100px; transform:rotate(-15deg);}50%{top:220px; transform:rotate(15deg);}100%{top:-100px; transform:rotate(-15deg);}}
+@keyframes fall {0%{top:-20px;transform:translateX(0) rotate(0deg);}100%{top:100vh;transform:translateX(100px) rotate(360deg);}}
+@keyframes confettiFall {0%{top:-10px;transform:rotate(0deg);}100%{top:100vh;transform:rotate(360deg);}}
+/* Section delay */
+section:nth-child(1){animation-delay:1.2s;}
+section:nth-child(2){animation-delay:1.6s;}
+section:nth-child(3){animation-delay:2s;}
+section:nth-child(4){animation-delay:2.4s;}
+section:nth-child(5){animation-delay:2.8s;}
+</style>
+</head>
+<body>
+
+<!-- Lampion -->
+<div class="lantern left"></div>
+<div class="lantern right"></div>
+
+<!-- Bunga jatuh -->
+<div class="flower" style="left:10%;animation-duration:5s;"></div>
+<div class="flower" style="left:30%;animation-duration:7s;"></div>
+<div class="flower" style="left:50%;animation-duration:6s;"></div>
+<div class="flower" style="left:70%;animation-duration:8s;"></div>
+<div class="flower" style="left:90%;animation-duration:5.5s;"></div>
+
+<!-- Confetti -->
+<script>
+for(let i=0;i<50;i++){
+    let confetti=document.createElement('div');
+    confetti.className='confetti';
+    confetti.style.left=Math.random()*100+'%';
+    confetti.style.background=['gold','#ff0000','#ffa500'][Math.floor(Math.random()*3)];
+    confetti.style.width=confetti.style.height=(Math.random()*10+5)+'px';
+    confetti.style.animationDuration=(Math.random()*5+3)+'s';
+    document.body.appendChild(confetti);
+}
+</script>
+
+<header>
+    <img src="1000209943.jpg.jpeg" alt="1000209943.jpeg" class="profile-pic">
+    <h1>Putricia Serenity</h1>
+    <h2>Desain Grafika</h2>
+</header>
+
+<main>
+    <!-- Tentang Saya -->
+    <section>
+        <h3>Tentang Saya</h3>
+        <p>Memiliki minat dan keterampilan di bidang desain grafika, terutama dalam layout dan penerbitan. Kreatif, teliti, dan selalu bersemangat mengembangkan kemampuan desain untuk menghasilkan karya yang maksimal.</p>
+    </section>
+
+    <!-- Kontak -->
+    <section>
+        <h3>Kontak</h3>
+        <p>Email: putriciaserenity@email.com</p>
+        <p>Instagram: @serrenittyy_</p>
+        <p>Telepon: 0812-9229-8405</p>
+        <p>Alamat: Jagakarsa, Jakarta Selatan</p>
+    </section>
+
+    <!-- Kemampuan / Keahlian -->
+    <section>
+        <h3>Keahlian</h3>
+        <ul>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Indesign</li>
+        </ul>
+    </section>
+
+    <!-- Pendidikan -->
+    <section>
+        <h3>Pendidikan</h3>
+        <ul>
+            <li>SMK Grafika Desa Putera – Desain Grafika (2023–Sekarang)</li>
+            <li>SMP Strada Wiyatasana – (2019-2022)</li>
+            <li>SD Strada Wiyatasana – (2013-2019)</li>
+        </ul>
+    </section>
+
+    <!-- Pengalaman -->
+    <section>
+        <h3>Pengalaman</h3>
+        <ul>
+            <li><strong>Redaksi:</strong>
+                <ul>
+                    <li>Menyusun dan mengedit naskah buku</li>
+                    <li>Mendesain cover dan ilustrasi buku menggunakan Adobe Illustrator & Photoshop</li>
+                    <li>Menata layout buku dengan Adobe InDesign sesuai tema dan pesan cerita</li>
+                    <li>Berkoordinasi dengan tim untuk memastikan hasil akhir sesuai standar penerbitan</li>
+                </ul>
+            </li>
+            <li><strong>Marketing Communication:</strong>
+                <ul>
+                    <li>Mendesain konten media sosial dan materi promosi menggunakan Adobe Illustrator & Photoshop</li>
+                    <li>Mengedit foto dokumentasi kegiatan</li>
+                    <li>Memproses pesanan pelanggan melalui website, Shopee, dan Tokopedia</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    CV PUTRICIA SERENITY
+</footer>
+
+</body>
+</html>
